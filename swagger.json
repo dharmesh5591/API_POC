@@ -34,7 +34,7 @@
 		"get":{
 		"tags":["api-poc"],
 		"summary": "adds three numbers",
-		"description": "mathematic addition done on providing three numbers",
+		"description": "mathematic addition done on providing two numbers",
 		"produces": "application/json",
 		"parameters":[
 			{
@@ -46,13 +46,6 @@
 			},
 			{
 			"name": "a2",
-			"in": "query",
-			"required": true,
-			"type": "integer",
-			"format": "int32"			
-			},
-			{
-			"name": "a3",
 			"in": "query",
 			"required": true,
 			"type": "integer",
