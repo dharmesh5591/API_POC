@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-30T17:28:06.306480100+05:30[Asia/Calcutta]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-30T19:30:30.959231800+05:30[Asia/Calcutta]")
 @Controller
 public class UserApiController implements UserApi {
 
@@ -107,19 +107,18 @@ public class UserApiController implements UserApi {
 
     public ResponseEntity<String> userAddNumbersGet(@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a1", required = true) Integer a1
 ,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a2", required = true) Integer a2
-,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a3", required = true) Integer a3
 ) {
         String accept = request.getHeader("Accept");
-//        if (accept != null && accept.contains("application/json")) {
-//            try {
-//                return new ResponseEntity<String>(objectMapper.readValue("\"\"", String.class), HttpStatus.NOT_IMPLEMENTED);
-//            } catch (IOException e) {
-//                log.error("Couldn't serialize response for content type application/json", e);
-//                return new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
-//            }
-//        }
+        if (accept != null && accept.contains("application/json")) {
+            try {
+                return new ResponseEntity<String>(objectMapper.readValue("\"\"", String.class), HttpStatus.NOT_IMPLEMENTED);
+            } catch (IOException e) {
+                log.error("Couldn't serialize response for content type application/json", e);
+                return new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+        }
 
-        return new ResponseEntity<String>("The Addition of Three Numbers is : " + (a1+a2+a3), HttpStatus.OK);
+        return new ResponseEntity<String>("The Addition of Two Numbers is : " + (a1+a2), HttpStatus.OK);
     }
 
 }

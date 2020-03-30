@@ -23,7 +23,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-30T17:52:18.115910500+05:30[Asia/Calcutta]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-30T19:30:30.959231800+05:30[Asia/Calcutta]")
 @Api(value = "user", description = "the user API")
 public interface UserApi {
 
@@ -120,7 +120,6 @@ public interface UserApi {
         method = RequestMethod.GET)
     ResponseEntity<String> userAddNumbersGet(@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a1", required = true) Integer a1
 ,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a2", required = true) Integer a2
-,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a3", required = true) Integer a3
 );
 
 }
