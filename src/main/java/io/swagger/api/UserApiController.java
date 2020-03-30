@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-30T20:51:22.131669300+05:30[Asia/Calcutta]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-30T20:56:39.674287100+05:30[Asia/Calcutta]")
 @Controller
 public class UserApiController implements UserApi {
 
@@ -107,6 +107,7 @@ public class UserApiController implements UserApi {
 
     public ResponseEntity<String> userAddNumbersGet(@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a1", required = true) Integer a1
 ,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a2", required = true) Integer a2
+,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "a3", required = true) Integer a3
 ) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
@@ -118,7 +119,7 @@ public class UserApiController implements UserApi {
             }
         }
 
-        return new ResponseEntity<String>("The addition of two numbers is : " + (a1 + a2),HttpStatus.OK);
+        return new ResponseEntity<String>("The addition of three numbers is : " + (a1+a2+a3),HttpStatus.OK);
     }
 
 }
