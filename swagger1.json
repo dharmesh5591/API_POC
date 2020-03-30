@@ -50,6 +50,13 @@
 			"required": true,
 			"type": "integer",
 			"format": "int32"			
+			},
+			{
+			"name": "a3",
+			"in": "query",
+			"required": true,
+			"type": "integer",
+			"format": "int32"			
 			}
 		],
 		"responses": {
